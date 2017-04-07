@@ -15,8 +15,8 @@ public final class mapSort {
 	
 	
 	 /*
-	  * LinkedHashMap±£´æÁË¼ÇÂ¼µÄ²åÈëË³Ğò£¬ÔÚÓÃIterator±éÀúLinkedHashMapÊ±£¬ÏÈµÃµ½µÄ¼ÇÂ¼¿Ï¶¨ÊÇÏÈ²åÈëµÄ¡£
-	  * ´Ë´¦»»ÎªÆäËûmapÎŞ·¨´ïµ½Ğ§¹û	
+	  * LinkedHashMapä¿å­˜äº†è®°å½•çš„æ’å…¥é¡ºåºï¼Œåœ¨ç”¨Iteratoréå†LinkedHashMapæ—¶ï¼Œå…ˆå¾—åˆ°çš„è®°å½•è‚¯å®šæ˜¯å…ˆæ’å…¥çš„ã€‚
+	  * æ­¤å¤„æ¢ä¸ºå…¶ä»–mapæ— æ³•è¾¾åˆ°æ•ˆæœ	
 	  */
 	public static Map<String, Integer> sortMapByValue(Map<String, Integer> oriMap) 
 	{
@@ -44,6 +44,14 @@ public final class mapSort {
 				sortedMap.put(tmpEntry.getKey(), tmpEntry.getValue());
 			}
 		}
+		
+		for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
+
+		    System.out.println("sortedMap Key = " + entry.getKey() + ", sortedMap Value = " + entry.getValue());
+
+		}
+		
+		
 		return sortedMap;
 	}
 	
