@@ -5,9 +5,9 @@ import java.io.*;
 public final class FileUtil
 {
     /** 
-     * 读取文件并按行输�?
+     * 霂餃��辣撟嗆�銵��?
      * @param filePath
-     * @param spec 允许解析的最大行数， spec==null时，解析�?���?
+     * @param spec �捂閫����憭扯��堆� spec==null�塚�閫���?�銵?
      * @return
      * @author
      * @since 2016-3-1
@@ -15,7 +15,6 @@ public final class FileUtil
     public static String read(final String filePath, final Integer spec)
     {
         File file = new File(filePath);
-        // 当文件不存在或�?不可读时
         if ((!isFileExists(file)) || (!file.canRead()))
         {
             System.out.println("file [" + filePath + "] is not exist or cannot read!!!");
@@ -32,7 +31,7 @@ public final class FileUtil
 
             String str = null;
             int index = 0;
-            while (((spec == null) || index++ < spec) && (str = br.readLine()) != null)
+            while ((str = br.readLine()) != null)
             {
                 sb.append(str + "\n");
                 System.out.println(str);
@@ -55,10 +54,10 @@ public final class FileUtil
 
     
     /** 
-     * 写文�?
-     * @param filePath 输出文件路径
-     * @param content 要写入的内容
-     * @param append 是否追加
+     * ��隞?
+     * @param filePath 颲�辣頝臬�
+     * @param content 閬��亦��捆
+     * @param append �臬餈賢�
      * @return
      * @author s00274007
      * @since 2016-3-1
@@ -72,7 +71,7 @@ public final class FileUtil
             return 0;
         }
 
-        // 当文件存在但不可写时
+        // 敶�隞嗅��其�銝�
         if (isFileExists(file) && (!file.canRead()))
         {
             return 0;
